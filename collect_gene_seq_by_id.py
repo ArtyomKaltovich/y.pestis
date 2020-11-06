@@ -5,7 +5,27 @@ import re
 
 from Bio import SeqIO
 
-IDS = ["aegA", "nemA", "phnG"]
+IDS = [
+"frdC",
+"frdA",
+"epmA",
+"mscM",
+"psd",
+"rsgA",
+"orn",
+"queG",
+"nnr",
+"tsaE",
+"amiB",
+"mutL",
+"miaA",
+"hfq",
+"hflX",
+"hflK",
+"hflC",
+"nsrR",
+"rnr",
+]
 PATTERN = re.compile(f"\[gene=({'|'.join(id_ for id_ in IDS)})\]")
 seqs = {key: [] for key in IDS}
 
@@ -20,6 +40,6 @@ for i, file in enumerate(glob.glob("data/*.gz")):
     #    break
 
 for gene, lines in seqs.items():
-    with open(os.path.join("result", f"{gene}.txt"), "w") as file:
+    with open(os.path.join("result", f"{gene}.fasta"), "w") as file:
         for sample, line in lines:
             file.write(f">{sample}\n{line}\n")
