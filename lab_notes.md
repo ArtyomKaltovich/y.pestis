@@ -15,3 +15,10 @@
  - for every gene MUSCLE codon alignment was made, using default settings.
  - every tree was build by minimal evolution method with default settings.
  - all alignment and trees were build using megax 10.1.8 software on linux machine.  
+
+#20.11.2020
+ - create script ``select_30_seqs.py`` for selecting and merging 30 random genomes.
+ as there are already almost 60 genomes and it will take to many time to process them all.
+ - ``sibeliaz -k 15 -n -o sibeliaz_out merged.fn``
+ - ``maf2synteny -s fine.txt -b 5000 sibeliaz_out/blocks_coords.gff``
+ - ``maf2synteny -s fine_500.txt -b 1000 sibeliaz_out/blocks_coords.gff``
