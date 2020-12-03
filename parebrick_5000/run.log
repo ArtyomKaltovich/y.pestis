@@ -1,0 +1,26 @@
+[2020-12-03 14:05:30,107] INFO - <Running module: Preprocess Data>
+[2020-12-03 14:05:30,125] INFO - Converting block coords to infercars format
+[2020-12-03 14:05:31,316] INFO - <Module finished: Preprocess Data>, elapsed 1.2090339660644531 seconds
+[2020-12-03 14:05:31,316] INFO - <Running module: Parsers and check strains>
+[2020-12-03 14:05:31,423] WARNING - No unique one-copy blocks found. Balanced rearrangements will not be called
+[2020-12-03 14:05:31,446] INFO - Blocks count: 237
+[2020-12-03 14:05:31,446] INFO - Unique one-copy blocks count: 0
+[2020-12-03 14:05:31,481] INFO - Mean block coverage: 57.98071833772608 %
+[2020-12-03 14:05:31,482] INFO - Mean unique one-copy blocks coverage: 0 %
+[2020-12-03 14:05:31,486] INFO - Trying to root tree by first child of root
+[2020-12-03 14:05:31,486] INFO - Children of root: [Tree node '' (0x7fc42cae2cd), Tree node '' (0x7fc42cae2eb), Tree node '' (0x7fc42c68fdc)]
+[2020-12-03 14:05:31,510] INFO - <Module finished: Parsers and check strains>, elapsed 0.1940462589263916 seconds
+[2020-12-03 14:05:31,510] INFO - <Running module: Unbalanced rearrangements characters>
+[2020-12-03 14:05:31,520] INFO - <Module finished: Unbalanced rearrangements characters>, elapsed 0.009384393692016602 seconds
+[2020-12-03 14:05:31,520] INFO - <Running module: Unbalanced rearrangements stats and clustering>
+[2020-12-03 14:05:31,615] INFO - Got characters after copy number variation consideration: 237
+[2020-12-03 14:05:31,615] INFO - Left non-convex characters after filtering: 17
+[2020-12-03 14:05:31,616] INFO - Counting distances between non-convex character blocks, may take a while
+[2020-12-03 14:05:31,720] INFO - Jaccard index matrix constructed
+[2020-12-03 14:05:31,754] INFO - Proximity matrix constructed
+[2020-12-03 14:05:31,761] INFO - Clustring is done
+[2020-12-03 14:05:31,762] INFO - Clusters: 8
+[2020-12-03 14:05:31,762] INFO - <Module finished: Unbalanced rearrangements stats and clustering>, elapsed 0.24216890335083008 seconds
+[2020-12-03 14:05:31,762] INFO - <Running module: Unbalanced rearrangements output>
+[2020-12-03 14:05:32,497] INFO - <Module finished: Unbalanced rearrangements output>, elapsed 0.7351658344268799 seconds
+[2020-12-03 14:05:32,498] INFO - Total elapsed time: 2.3910865783691406 seconds

@@ -30,4 +30,6 @@
    conservative ones are too conservatives.
  - create script muscle.py to align gene sequence and merge them to one alignment
  - create tree by megax minumal evalution model and put it to result/all_genes.newick and plot/all_genes_tree.png
+ - ``parebrick -t result/all_genes.newick -b 1000 -o parebrick_1000``
+ - ``parebrick -t result/all_genes.newick -b 5000 -o parebrick_5000``
 

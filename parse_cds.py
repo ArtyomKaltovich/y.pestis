@@ -12,20 +12,19 @@ import pandas as pd
 DIR = "data/ncbi-genomes-2020-12-03/"
 GENES_SAMPLE_SIZE = 100
 
-pathes = pd.read_csv("data/selected.csv")["label"]
+pathes = pd.read_csv("data/selected.csv")
 
-pathes = [(DIR, p.partition("\n")[0]) for p in pathes]
-pathes = random.sample(pathes, 30)
+pathes["path"] = DIR + pathes["label"]
 
 genes: Dict[str, Dict[str, str]] = defaultdict(dict)  # Dict[gene, Dict[sample, seq]]
 pattern = re.compile(r"\[gene=(\w+)\]")
 
-for path in pathes:
-    with gzip.open(os.path.join(*path), "rt") as handle:
+for path in pathes.itertuples():
+    with gzip.open(os.path.join(path.path), "rt") as handle:
         for record in SeqIO.parse(handle, "fasta"):
             if m := re.search(pattern, record.description):
                 gene = m.group(1)
-                genes[gene][path[-1]] = record.seq
+                genes[gene][path.strain] = record.seq
 
 # select only genes presented in every sample
 genes = {key: value for key, value in genes.items() if len(value) == len(pathes)}
