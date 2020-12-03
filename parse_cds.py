@@ -7,12 +7,12 @@ from collections import defaultdict
 from typing import Dict
 
 from Bio import SeqIO
+import pandas as pd
 
 DIR = "data/ncbi-genomes-2020-12-03/"
 GENES_SAMPLE_SIZE = 100
 
-with open("data/selected_cds.txt") as cds:
-    pathes = cds.readlines()
+pathes = pd.read_csv("data/selected.csv")["label"]
 
 pathes = [(DIR, p.partition("\n")[0]) for p in pathes]
 pathes = random.sample(pathes, 30)
