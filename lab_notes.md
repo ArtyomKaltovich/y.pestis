@@ -22,3 +22,12 @@
  - ``sibeliaz -k 15 -n -o sibeliaz_out merged.fn``
  - ``maf2synteny -s fine.txt -b 5000 sibeliaz_out/blocks_coords.gff``
  - ``maf2synteny -s fine_500.txt -b 1000 sibeliaz_out/blocks_coords.gff``
+
+#03.12.2020
+ - extract files names of samples, because they wasn't presented in merged.fna by get_file_path_from_merged.py and
+   selected_assembles_path_to_cds_path.py, save them to data\selected.txt and data\selected_cds.txt
+ - create parse_cds.py to extract 100 random genes, represented in every sample, select random genes, because 
+   conservative ones are too conservatives.
+ - create script muscle.py to align gene sequence and merge them to one alignment
+ - create tree by megax minumal evalution model and put it to result/all_genes.newick and plot/all_genes_tree.png
+

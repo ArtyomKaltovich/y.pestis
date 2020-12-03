@@ -23,7 +23,7 @@ def main():
     iterator = iter(alignments)
     first = next(iterator)
     all = sum(iterator, start=first)
-    with open("result/all_genes_allignment.fna", "w") as handle:
+    with open("result/all_genes_allignment.fas", "w") as handle:
         AlignIO.write(all, handle, "fasta")
 
 
